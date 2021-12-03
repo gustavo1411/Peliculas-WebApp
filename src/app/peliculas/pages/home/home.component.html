@@ -1,0 +1,48 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode="push">
+
+        <mat-toolbar>
+
+            <button mat-icon-button
+                    (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a routerLink="/peliculas/peliculas" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon>list</mat-icon>
+                <span>Peliculas</span>
+            </a>
+
+            <a routerLink="/peliculas/buscar" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon>search</mat-icon>
+                <span>Buscar Peliculas</span>
+            </a>
+
+            
+        </mat-nav-list>
+
+
+
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="example-spacer"></span>
+        <span>Peliculas WebApp</span>
+        <span class="example-spacer"></span>
+
+    </mat-toolbar>
+
+    <div class="row">
+        <div class="col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</mat-sidenav-container>
+

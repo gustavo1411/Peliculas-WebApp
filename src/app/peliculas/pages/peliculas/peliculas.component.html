@@ -1,0 +1,40 @@
+
+    <div fxLayout="row wrap"
+        fxLayout.xs="column"
+        fxLayoutAlign="center"
+        fxLayoutGap="20px">
+        <div fxFlex="50"
+            fxFlex.lg="15"
+            fxFlex.sm="30"
+             *ngFor="let pelicula of peliculas">
+
+           <app-pelicula-tarjeta [pelicula]="pelicula"></app-pelicula-tarjeta>
+           
+           
+        </div>
+    </div>
+
+    <h3>Peliculas Populares</h3>
+    
+
+    <div fxLayout="row wrap"
+        fxLayout.xs="column"
+        fxLayoutAlign="center"
+        fxLayoutGap="20px">
+        <div fxFlex="50"
+            fxFlex.lg="15"
+            fxFlex.sm="30"
+             *ngFor="let pelicula of populares">
+
+           
+           
+             
+             <app-populares [pelicula]="pelicula"></app-populares>
+           
+        </div>
+    </div>
+    
+   
+    
+
+

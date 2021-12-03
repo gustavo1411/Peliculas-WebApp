@@ -1,0 +1,14 @@
+
+
+<mat-card  [routerLink]="['/peliculas/detalles', pelicula.id]">
+    <mat-card-header class="carousel-item">
+        <mat-card-title>{{pelicula.title}}</mat-card-title>
+        <mat-card-subtitle>{{pelicula.original_title}}</mat-card-subtitle>
+    </mat-card-header>
+    <img matCardImage [src]="pelicula.backdrop_path | imagen">
+    <mat-card-content>
+        <p>{{pelicula.release_date}}</p>
+    </mat-card-content>
+</mat-card>
+
+  
